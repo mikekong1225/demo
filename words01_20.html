@@ -1,330 +1,474 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <meta charset="UTF-8">
-    <title></title>
-    <style>
-        /* From extension vscode.github */
-        /*---------------------------------------------------------------------------------------------
+<title>words01_20.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-        .vscode-dark img[src$=\#gh-light-mode-only],
-        .vscode-light img[src$=\#gh-dark-mode-only] {
-            display: none;
-        }
-    </style>
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
 
-    <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
-    <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
-    <style>
-        body {
-            font-family: Microsoft Yahei, DejaVu Sans Mono, -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', 'HelveticaNeue-Light', 'Ubuntu', 'Droid Sans', sans-serif;
-            font-size: 14px;
-            line-height: 1.6;
-        }
-    </style>
-    <style>
-        .task-list-item {
-            list-style-type: none;
-        }
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
 
-        .task-list-item-checkbox {
-            margin-left: -20px;
-            vertical-align: middle;
-            pointer-events: none;
-        }
-    </style>
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
 
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
 </head>
-
-<body class="vscode-body vscode-light">
-
-    <head>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <style>
-        word {
-            color: orange;
-            font-size: 18px;
-            font-weight: bolder;
-        }
-
-        example {
-            font-weight: bolder;
-            font-size: 18px;
-        }
-
-        mytitle {
-            font-weight: bolder;
-            font-size: 18px;
-            margin: 0 auto;
-        }
-
-        @media screen and (max-width: 600px) {
-
-            word {
-                color: orange;
-                font-size: 6vw;
-                font-weight: bolder;
-            }
-
-            example {
-                font-weight: bolder;
-                font-size: 6vw;
-            }
-
-            mytitle {
-                font-weight: bolder;
-                font-size: 6.5vw;
-                margin: 0 auto;
-            }
-        }
-    </style>
-    <p>
-        <mytitle>word list</mytitle><br>
-    </p>
-    <ul>
-        <li>
-            <p>
-                <word>1. hamper</word>
-            </p>
-            <p>
-                <example> <code>Rescue teams were hampered by ice-covered mountain roads.</code> </example>
-            </p>
-        </li>
-        <li>
-            <p>
-                <word>2. fierce</word>
-            </p>
-            <p>
-                <example> <code>You're faced with fierce competition in the job market.</code> </example>
-            </p>
-        </li>
-        <li>
-            <p>
-                <word>3. vanilla</word>
-            </p>
-            <p>
-                <example> <code>He loves vanilla ice-cream.</code> </example>
-            </p>
-            <p>
-                <example> <code>I thought his performance in the movie was very vanilla- he's normally amazing.</code>
-                </example>
-            </p>
-        </li>
-        <li>
-            <p>
-                <word>4. etiquette</word>
-            </p>
-            <p>
-                <example> <code>The rules of etiquette are not so strict nowadays.</code> </example>
-            </p>
-            <p>
-                <example> <code>She's a real stickler for etiquette, so you'd better ask her advice.</code> </example>
-            </p>
-        </li>
-        <li>
-            <p>
-                <word>5. bruise</word>
-            </p>
-            <p>
-                <example> <code>He was covered with bruises after falling off his bicycle.</code> </example>
-            </p>
-            <p>
-                <example> <code>She bruised herself against the desk.</code> </example>
-            </p>
-        </li>
-        <li>
-            <p>
-                <word>6. hoist</word>
-            </p>
-            <p>
-                <example> <code>Tomorrow the final section of the bridge will be hoisted into place.</code> </example>
-            </p>
-        </li>
-        <li>
-            <p>
-                <word>7. coax</word>
-            </p>
-            <p>
-                <example> <code>Perhaps you could coax your father into taking you to the station.</code> </example>
-            </p>
-            <p>
-                <example> <code>Some operators are better at coaxing the machine than others.</code> </example>
-            </p>
-        </li>
-        <li>
-            <p>
-                <word>8. frippery</word>
-            </p>
-            <p>
-                <example> <code>Those are not luxuries or fripperies, but basic necessities.</code> </example>
-            </p>
-            <p>
-                <example> <code>The programme of spending that we are discussing is not frippery.</code> </example>
-            </p>
-        </li>
-        <li>
-            <p>
-                <word>9. lozenge</word>
-            </p>
-            <p>
-                <example> <code>How many lozenges do I need to take?</code> </example>
-            </p>
-            <p>
-                <example>
-                    <code>a shape with four sides and two opposite angles of more than 90 degrees and two of less than 90 egrees.</code>
-                </example>
-            </p>
-        </li>
-        <li>
-            <p>
-                <word>10. raisin</word>
-            </p>
-            <p>
-                <example> <code>a dried black grape</code> </example>
-            </p>
-            <p>
-                <example> <code>Next to some cute little bottles of raisins, ketchup and oatmeal.</code> </example>
-            </p>
-        </li>
-        <li>
-            <p>
-                <word>11. latte</word>
-            </p>
-            <p>
-                <example> <code>a hot drink made from espresso(= strong coffee) and milk</code> </example>
-            </p>
-            <p>
-                <example>
-                    <code>We were having a conversation, and it was the three of us, drinking lattes in Starbucks, and we were chatting about a movie.</code>
-                </example>
-            </p>
-        </li>
-        <li>
-            <p>
-                <word>12. toupee</word>
-            </p>
-            <p>
-                <example> <code>a samll wig that is worn by a man to cover a bald spot on his head</code> </example>
-            </p>
-            <p>
-                <example> <code>Duncan wears a toupee to cover his bald head.</code> </example>
-            </p>
-        </li>
-        <li>
-            <p>
-                <word>13. pretzel</word>
-            </p>
-            <p>
-                <example> <code>a hard salty biscuit that has been baked especially in stick or knot shapes</code>
-                </example>
-            </p>
-            <p>
-                <example> <code>He demands sunglasses and giant pretzels and the businesses supply them.</code>
-                </example>
-            </p>
-        </li>
-        <li>
-            <p>
-                <word>14. gourmet</word>
-            </p>
-            <p>
-                <example>
-                    <code>So perhaps you could tell your examiner, when I work really hard, I like to treat myself to a gourmet meal of my favorite food at an expensive resturant, because I deserve it.</code>
-                </example>
-            </p>
-            <p>
-                <example>
-                    <code>Great! Well, nothing makes me happier than tasty food! And I'm a bit of a gourmet, you know.</code>
-                </example>
-            </p>
-        </li>
-        <li>
-            <p>
-                <word>15. kudos</word>
-            </p>
-            <p>
-                <example> <code>He received kudos from everyone on his performance.</code> </example>
-            </p>
-            <p>
-                <example> <code>Well, kudos to you Rob for today's programme.</code> </example>
-            </p>
-        </li>
-        <li>
-            <p>
-                <word>16. scam</word>
-            </p>
-            <p>
-                <example>
-                    <code>Now, I just mentioned the word scam, which is an illegal way of making money by tricking someone.</code>
-                </example>
-            </p>
-            <p>
-                <example> <code>And today the fastest-growing scams are not connected to drugs.</code> </example>
-            </p>
-        </li>
-        <li>
-            <p>
-                <word>17. genuine</word>
-            </p>
-            <p>
-                <example>
-                    <code>You guys are some of the hardest working, some  of the most genuine, some of the most honest people I've ever met.</code>
-                </example>
-            </p>
-            <p>
-                <example>
-                    <code>We may think that we'll never be scammed, but already millions of people have fallen for fake emails, phone calls or letters that look genuine and ask us to give or update our financial details.</code>
-                </example>
-            </p>
-        </li>
-        <li>
-            <p>
-                <word>18. Antarctica</word>
-            </p>
-            <p>
-                <example> <code>The world’s coldest continent, and the most difficult to reach, is Antarctica.</code>
-                </example>
-            </p>
-        </li>
-        <li>
-            <p>
-                <word>19. giraffe</word>
-            </p>
-            <p>
-                <example> <code>A giraffe, giraffe. It has a long neck. Legs are long too.</code> </example>
-            </p>
-            <p>
-                <example> <code>Half of the giraffe's height comes from its neck, which is longer than its legs.</code>
-                </example>
-            </p>
-        </li>
-        <li>
-            <p>
-                <word>20. diesel</word>
-            </p>
-            <p>
-                <example>
-                    <code>One, President Macron wants French drivers to switch from diesel cars to electric ones.</code>
-                </example>
-            </p>
-            <p>
-                <example>
-                    <code>At the moment petrol and diesel engines are causing a lot of damage to the planet and we're going to eventually run out of natural resources, so I think the developments will be towards electric or hybrid cars.</code>
-                </example>
-            </p>
-        </li>
-    </ul>
-
-
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<head>`
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<link rel="stylesheet" href="words.css">
+<p><mytitle>word list</mytitle><br></p>
+<ul>
+<li>
+<p><word>1. hamper</word></p>
+<p class="example"> Rescue teams were hampered by ice-covered mountain roads. </p>
+</li>
+<li>
+<p><word>2. fierce</word></p>
+<p class="example"> You're faced with fierce competition in the job market. </p>
+</li>
+<li>
+<p><word>3. vanilla</word></p>
+<p class="example"> He loves vanilla ice-cream. </p>
+<p class="example"> I thought his performance in the movie was very vanilla- he's normally amazing. </p>
+</li>
+<li>
+<p><word>4. etiquette</word></p>
+<p class="example"> The rules of etiquette are not so strict nowadays. </p>
+<p class="example"> She's a real stickler for etiquette, so you'd better ask her advice. </p>
+</li>
+<li>
+<p><word>5. bruise</word></p>
+<p class="example"> He was covered with bruises after falling off his bicycle. </p>
+<p class="example"> She bruised herself against the desk. </p>
+</li>
+<li>
+<p><word>6. hoist</word></p>
+<p class="example"> Tomorrow the final section of the bridge will be hoisted into place. </p>
+</li>
+<li>
+<p><word>7. coax</word></p>
+<p class="example"> Perhaps you could coax your father into taking you to the station. </p>
+<p class="example"> Some operators are better at coaxing the machine than others. </p>
+</li>
+<li>
+<p><word>8. frippery</word></p>
+<p class="example"> Those are not luxuries or fripperies, but basic necessities. </p>
+<p class="example"> The programme of spending that we are discussing is not frippery. </p>
+</li>
+<li>
+<p><word>9. lozenge</word></p>
+<p class="example"> How many lozenges do I need to take? </p>
+<p class="example"> a shape with four sides and two opposite angles of more than 90 degrees and two of less than 90 egrees. </p>
+</li>
+<li>
+<p><word>10. raisin</word></p>
+<p class="example"> a dried black grape </p>
+<p class="example"> Next to some cute little bottles of raisins, ketchup and oatmeal. </p>
+</li>
+<li>
+<p><word>11. latte</word></p>
+<p class="example"> a hot drink made from espresso(= strong coffee) and milk </p>
+<p class="example"> We were having a conversation, and it was the three of us, drinking lattes in Starbucks, and we were chatting about a movie. </p>
+</li>
+<li>
+<p><word>12. toupee</word></p>
+<p class="example"> a samll wig that is worn by a man to cover a bald spot on his head </p>
+<p class="example"> Duncan wears a toupee to cover his bald head. </p>
+</li>
+<li>
+<p><word>13. pretzel</word></p>
+<p class="example"> a hard salty biscuit that has been baked especially in stick or knot shapes </p>
+<p class="example"> He demands sunglasses and giant pretzels and the businesses supply them. </p>
+</li>
+<li>
+<p><word>14. gourmet</word></p>
+<p class="example"> So perhaps you could tell your examiner, when I work really hard, I like to treat myself to a gourmet meal of my favorite food at an expensive resturant, because I deserve it. </p>
+<p class="example"> Great! Well, nothing makes me happier than tasty food! And I'm a bit of a gourmet, you know. </p>
+</li>
+<li>
+<p><word>15. kudos</word></p>
+<p class="example"> He received kudos from everyone on his performance. </p>
+<p class="example"> Well, kudos to you Rob for today's programme. </p>
+</li>
+<li>
+<p><word>16. scam</word></p>
+<p class="example"> Now, I just mentioned the word scam, which is an illegal way of making money by tricking someone. </p>
+<p class="example"> And today the fastest-growing scams are not connected to drugs. </p>
+</li>
+<li>
+<p><word>17. genuine</word></p>
+<p class="example"> You guys are some of the hardest working, some  of the most genuine, some of the most honest people I've ever met. </p>
+<p class="example"> We may think that we'll never be scammed, but already millions of people have fallen for fake emails, phone calls or letters that look genuine and ask us to give or update our financial details. </p>
+</li>
+<li>
+<p><word>18. Antarctica</word></p>
+<p class="example"> The world’s coldest continent, and the most difficult to reach, is Antarctica. </p>
+</li>
+<li>
+<p><word>19. giraffe</word></p>
+<p class="example"> A giraffe, giraffe. It has a long neck. Legs are long too. </p>
+<p class="example"> Half of the giraffe's height comes from its neck, which is longer than its legs. </p>
+</li>
+<li>
+<p><word>20. diesel</word></p>
+<p class="example"> It's one of the best diesel cars you can buy.</p>
+<p class="example"> At the moment petrol and diesel engines are causing a lot of damage to the planet and we're going to eventually run out of natural resources, so I think the developments will be towards electric or hybrid cars. </p>
+</li>
+</ul>
 
 </body>
-
 </html>
