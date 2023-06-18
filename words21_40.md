@@ -11,9 +11,10 @@ word {
             font-weight: bolder;
         }
 
-        example {
+        .example {
             font-weight: bolder;
             font-size: 18px;
+            color: #b36800;
         }
 
         mytitle {
@@ -22,6 +23,11 @@ word {
             margin: 0 auto;
         }
 
+        .meaning {
+            font-weight: bolder;
+            font-size: 18px;
+            color: #b38b00;
+        }
         @media screen and (max-width: 600px) {
 
             word {
@@ -30,11 +36,17 @@ word {
                 font-weight: bolder;
             }
 
-            example {
+            .example {
                 font-weight: bolder;
                 font-size: 6vw;
+                color: #b36800;
             }
 
+            .meaning {
+                font-weight: bolder;
+                font-size: 6vw;
+                color: #b38b00;
+            }
             mytitle {
                 font-weight: bolder;
                 font-size: 6.5vw;
@@ -47,134 +59,134 @@ word {
 
 - <word>21. a blessing in disguise</word>
 
-  <meaning>`something that seems to be bad or unlucky at first, but which you later realize is good or lucky`</meaning>
+<p class="meaning">something that seems to be bad or unlucky at first, but which you later realize is good or lucky</p>
 
-  <example> `Be positive, this could be a blessing in disguise, use the time gained wisely.
-` </example>
+<p class="example">Be positive, this could be a blessing in disguise, use the time gained wisely.
+ </p>
 
 - <word>22. a picture is worth a thousand words</word>
 
-  <meaning>`used to say that it is often easier to show something in a picture than to describe it with words`</meaning>
+<p class="meaning">used to say that it is often easier to show something in a picture than to describe it with words</p>
 
-  <example> `Its easier to learn how a machine works from pictures rather than descriptions, since a picture is worth a thousand words.
-` </example>
+<p class="example">Its easier to learn how a machine works from pictures rather than descriptions, since a picture is worth a thousand words.
+ </p>
 
 - <word>23. a piece of cake</word>
 
-  <meaning>`very easy task; very simple work`</meaning>
+<p class="meaning">very easy task; very simple work</p>
 
-  <example> `They said the test would be difficult, but it was a piece of cake – I’ll pass with no problem at all.
-` </example>
+<p class="example">They said the test would be difficult, but it was a piece of cake – I’ll pass with no problem at all.
+ </p>
 
 - <word>24. actions speak louder than words</word>
 
-  <meaning>`doing is better than just speaking; better to do something rather than just talk`</meaning>
+<p class="meaning">doing is better than just speaking; better to do something rather than just talk</p>
 
-  <example> `A good leader does not tell his team how things should be done, he shows them; after all, actions speak louder than words.
-` </example>
+<p class="example">A good leader does not tell his team how things should be done, he shows them; after all, actions speak louder than words.
+ </p>
 
 - <word>25. add insult to injury</word>
 
-  <meaning>`to make a bad situation worse; to worsen an unfavorable or uncomfortable situation`</meaning>
+<p class="meaning">to make a bad situation worse; to worsen an unfavorable or uncomfortable situation</p>
 
-  <example> `I was already getting late for work stuck in the traffic, and to add insult to injury, I was stopped by the police for speeding.
-` </example>
+<p class="example">I was already getting late for work stuck in the traffic, and to add insult to injury, I was stopped by the police for speeding.
+ </p>
 
 - <word>26. bark up the wrong tree or be barking up the wrong tree</word>
 
-  <meaning>`to make a wrong choice; take a wrong approach to something`</meaning>
+<p class="meaning">to make a wrong choice; take a wrong approach to something</p>
 
-  <example> `I am not the person who spread those rumours about you, you are barking up the wrong tree.
-` </example>
+<p class="example">I am not the person who spread those rumours about you, you are barking up the wrong tree.
+ </p>
 
 - <word>27. beat around the bush or beat about the bush</word>
 
-  <meaning>`avoid talking about the main topic; avoid the important point`</meaning>
+<p class="meaning">avoid talking about the main topic; avoid the important point</p>
 
-  <example> `Quit beating around the bush and tell me what you really want.
-` </example>
+<p class="example">Quit beating around the bush and tell me what you really want.
+ </p>
 
 - <word>28. bite off more than one can chew</word>
 
-  <meaning>`attempt to do something which is hardly achievable; try to do more than one is able to do`</meaning>
+<p class="meaning">attempt to do something which is hardly achievable; try to do more than one is able to do</p>
 
-  <example> `It feels like I bit off more than I could chew when I promised to complete this worksheet in one day.
-` </example>
+<p class="example">It feels like I bit off more than I could chew when I promised to complete this worksheet in one day.
+ </p>
 
 - <word>29. bite the bullet</word>
 
-  <meaning>`to avoid showing fear or discomfort in an unpleasant situation;  to be brave and face a difficult situation`</meaning>
+<p class="meaning">to avoid showing fear or discomfort in an unpleasant situation;  to be brave and face a difficult situation</p>
 
-  <example> `Mary has to learn to bite the bullet and face her fears of flying.
-` </example>
+<p class="example">Mary has to learn to bite the bullet and face her fears of flying.
+ </p>
 
 - <word>30. break a leg</word>
 
-  <meaning>`good luck; to wish something luck especially before a performance`</meaning>
+<p class="meaning">good luck; to wish something luck especially before a performance</p>
 
-  <example> `You have an exam tomorrow? Break a leg!
-` </example>
+<p class="example">You have an exam tomorrow? Break a leg!
+ </p>
 
 - <word>31. cut to the chase</word>
-  <meaning>
+  <p class="meaning">
   to get to the main point or important information quickly and directly
-  </meaning>
+  </p>
 
-  <example> `   Can you please cut to the chase and tell me what happened exactly?` </example>
+  <p class="example">Can you please cut to the chase and tell me what happened exactly? </p>
 
-  <example> `Let's cut to the chase and discss the most important issues.` </example>
-  <example> `I don't have much time, so can you cut to the chase and give me the key points?` </example>
+  <p class="example">Let's cut to the chase and discss the most important issues. </p>
+  <p class="example">I don't have much time, so can you cut to the chase and give me the key points? </p>
 
 <br><br><br><br>
 
 - <word>32. toupee</word>
 
-  <example> `a samll wig that is worn by a man to cover a bald spot on his head` </example>
+  <p class="example">a samll wig that is worn by a man to cover a bald spot on his head </p>
 
-  <example> `Duncan wears a toupee to cover his bald head.` </example>
+  <p class="example">Duncan wears a toupee to cover his bald head. </p>
 
 - <word>33. pretzel</word>
 
-  <example> `a hard salty biscuit that has been baked especially in stick or knot shapes` </example>
+  <p class="example">a hard salty biscuit that has been baked especially in stick or knot shapes </p>
 
-  <example> `He demands sunglasses and giant pretzels and the businesses supply them.` </example>
+  <p class="example">He demands sunglasses and giant pretzels and the businesses supply them. </p>
 
 - <word>34. gourmet</word>
 
-  <example> `So perhaps you could tell your examiner, when I work really hard, I like to treat myself to a gourmet meal of my favorite food at an expensive resturant, because I deserve it.` </example>
+  <p class="example">So perhaps you could tell your examiner, when I work really hard, I like to treat myself to a gourmet meal of my favorite food at an expensive resturant, because I deserve it. </p>
 
-  <example> `Great! Well, nothing makes me happier than tasty food! And I'm a bit of a gourmet, you know.` </example>
+  <p class="example">Great! Well, nothing makes me happier than tasty food! And I'm a bit of a gourmet, you know. </p>
 
 - <word>35. kudos</word>
 
-  <example> `He received kudos from everyone on his performance.` </example>
+  <p class="example">He received kudos from everyone on his performance. </p>
 
-  <example> `Well, kudos to you Rob for today's programme.` </example>
+  <p class="example">Well, kudos to you Rob for today's programme. </p>
 
 - <word>36. scam</word>
 
-  <example> `Now, I just mentioned the word scam, which is an illegal way of making money by tricking someone.` </example>
+  <p class="example">Now, I just mentioned the word scam, which is an illegal way of making money by tricking someone. </p>
 
-  <example> `And today the fastest-growing scams are not connected to drugs.` </example>
+  <p class="example">And today the fastest-growing scams are not connected to drugs. </p>
 
 - <word>37. genuine</word>
 
-  <example> `You guys are some of the hardest working, some  of the most genuine, some of the most honest people I've ever met.` </example>
+  <p class="example">You guys are some of the hardest working, some  of the most genuine, some of the most honest people I've ever met. </p>
 
-  <example> `We may think that we'll never be scammed, but already millions of people have fallen for fake emails, phone calls or letters that look genuine and ask us to give or update our financial details.` </example>
+  <p class="example">We may think that we'll never be scammed, but already millions of people have fallen for fake emails, phone calls or letters that look genuine and ask us to give or update our financial details. </p>
 
 - <word>38. Antarctica</word>
 
-  <example> `The world’s coldest continent, and the most difficult to reach, is Antarctica.` </example>
+  <p class="example">The world’s coldest continent, and the most difficult to reach, is Antarctica. </p>
 
 - <word>39. giraffe</word>
 
-  <example> `A giraffe, giraffe. It has a long neck. Legs are long too.` </example>
+  <p class="example">A giraffe, giraffe. It has a long neck. Legs are long too. </p>
 
-  <example> `Half of the giraffe's height comes from its neck, which is longer than its legs.` </example>
+  <p class="example">Half of the giraffe's height comes from its neck, which is longer than its legs. </p>
 
 - <word>40. diesel</word>
 
-  <example> `One, President Macron wants French drivers to switch from diesel cars to electric ones.` </example>
+  <p class="example">One, President Macron wants French drivers to switch from diesel cars to electric ones. </p>
 
-  <example> `At the moment petrol and diesel engines are causing a lot of damage to the planet and we're going to eventually run out of natural resources, so I think the developments will be towards electric or hybrid cars.` </example>
+  <p class="example">At the moment petrol and diesel engines are causing a lot of damage to the planet and we're going to eventually run out of natural resources, so I think the developments will be towards electric or hybrid cars. </p>
