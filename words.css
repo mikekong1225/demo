@@ -16,6 +16,11 @@ mytitle {
   margin: 0 auto;
 }
 
+.mylink {
+  font-size: 18px;
+  margin: 0 auto;
+}
+
 .meaning {
   font-weight: bolder;
   font-size: 18px;
@@ -43,5 +48,11 @@ mytitle {
     font-weight: bolder;
     font-size: 6.5vw;
     margin: 0 auto;
+  }
+
+  .mylink {
+    font-weight: bolder;
+    font-size: 6vw;
+    color: #24b300;
   }
 }
